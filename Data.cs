@@ -17,8 +17,10 @@ namespace PalleOpgaverOOP
             Console.WriteLine(teacher);
             if (showCourses) Show(teacher.Courses);
         }
-        internal void Show(List<Course> courses) { foreach (var course in courses) Show(course); }
-        internal void Show(Course course) { Console.WriteLine(course); }
+        internal void Show(List<Course> courses) 
+        { foreach (var course in courses) Show(course); }
+        internal void Show(Course course) 
+        { Console.WriteLine(course); }
 
         //Adding the data for teachers and courses
         internal void Add()
