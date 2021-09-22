@@ -11,7 +11,7 @@ namespace PalleOpgaverOOP
 
         //Creating the overloads while using the ToString overrides in WriteLine
         internal void Show(List<Teacher> teachers, bool showCourses = false)
-        { foreach (var teacher in teachers) Show(teacher, showCourses); }        
+        { foreach (var teacher in teachers) Show(teacher, showCourses); }
         internal void Show(Teacher teacher, bool showCourses = false)
         {
             Console.WriteLine(teacher);
@@ -23,18 +23,18 @@ namespace PalleOpgaverOOP
         //Adding the data for teachers and courses
         internal void Add()
         {
-            //While the courseList is empty at the instantiating of the Teacher, it will be filled later
-            //and used in the Teacher property: Courses so it returns the courses with the right teacher.
+            //While the courseList is empty at the instantiation of the Teacher, it will be filled later
+            //and used in the Teacher property: Courses, so it returns the courses with the right teacher.
             Teacher hpo = new Teacher(courseList) { Id = 117, Name = "Henrik Poulsen", Email = "hpo@tec.dk" };
             Teacher pwe = new Teacher(courseList) { Id = 112, Name = "Palle Westermann", Email = "pwe@tec.dk" };
-            teacherList.Add(hpo);
-            teacherList.Add(pwe);
+            //An example of adding multiple objects at the same time
+            teacherList.AddRange(new Teacher[] { pwe, hpo });
 
             //Adding Courses by adding directly to the courseList.
             courseList.Add(new Course()
             { Id = 16880, Name = "Object Oriented Programming", Classroom = "E310", Teacher = pwe });
             courseList.Add(new Course()
-            { Id = 16880, Name = "GUI Programming", Classroom = "E310", Teacher = pwe });
+            { Id = 16475, Name = "GUI Programming", Classroom = "E310", Teacher = pwe });
             courseList.Add(new Course()
             { Id = 16474, Name = "Database Programming", Classroom = "E311", Teacher = hpo });
             courseList.Add(new Course()

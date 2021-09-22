@@ -6,7 +6,7 @@ namespace PalleOpgaverOOP
     {
         List<Course> courseList;
 
-        //Example of overload of constructor
+        //Example of overload of default constructor
         public Teacher(List<Course> courses)
         {
             courseList = courses;
